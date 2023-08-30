@@ -2,6 +2,6 @@
 set -x
 
 PUML='java -jar /opt/plantuml.jar'
-ARGS=${1}
+ARGS="${1}"
 
-${PUML} ${1} ${2}
+${PUML} ${1}
