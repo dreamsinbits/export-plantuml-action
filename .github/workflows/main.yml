@@ -17,4 +17,4 @@ jobs:
       - name: Check if out directory exists
         run: if [ ! -d "diagrams/out" ]; then exit 1; fi
       - name: Check if diagram was exported as svg
-        run: if [ ! -e "diagrams/out/example.svg" ]; then exit 1; fi 
+        run: if [ -e "diagrams/out/example.svg" ]; then exit 1; fi 
