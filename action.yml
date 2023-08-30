@@ -5,8 +5,15 @@ inputs:
     description: 'Arguments for PlantUML'
     required: true
     default: '-svg ./'
+  diagrams-pattern:
+    description: 'Pattern for PlantUML diagrams'
+    required: true
+    default: ./*.puml
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.args }}
+    - ${{ inputs.diagrams-pattern }}
+  
+  
