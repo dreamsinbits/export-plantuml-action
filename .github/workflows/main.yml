@@ -13,4 +13,4 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: plantuml
         with:
-          args: '-svg /diagrams/*.puml'
+          args: -svg -o out /diagrams/*.puml

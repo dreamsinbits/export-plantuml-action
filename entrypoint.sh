@@ -1,9 +1,7 @@
 #!/bin/bash
 set -x
 
-PUML='java -jar /opt/plantuml.jar -svg -o out diagrams/*.puml'
+PUML='java -jar /opt/plantuml.jar'
 ARGS=$1
 
-echo $1
-
-$PUML 
+$PUML $ARGS
