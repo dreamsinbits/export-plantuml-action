@@ -2,3 +2,14 @@
 GitHub Action for exporting PlantUML diagrams to images.
 The action exports PlanUML diagram files to images.
 This enables a continues integration for PlantUML diagrams.
+
+## Inputs
+### `args`
+
+**Required** The arguments that are forwarded to PlantUML CLI. 
+
+Default: `-svg ./`
+
+## Example usage
+
+
