@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  export_plantuml:
+    runs-on: ubuntu-latest
+    name: Exports PLantUML diagrams to image files and checks if that has worked.
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Export PlantUML action step
+        uses: ./ # Uses an action in the root directory
+        id: plantuml
+        with:
+          args: -svg -o out diagrams/*.puml
+      - name: Check if out directory exists
+        run: if [ ! -d "diagrams/out" ]; then exit 1; fi
+      - name: Check if diagram was exported as svg
+        run: if [ ! -e "diagrams/out/example.svg" ]; then exit 1; fi 

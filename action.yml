@@ -1,0 +1,13 @@
+name: 'Export PlantUML'
+description: 'Exports PlantUML diagrams to image files'
+inputs:
+  args:
+    description: 'Arguments for PlantUML'
+    required: true
+    default: '-svg ./'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.args }}
+  

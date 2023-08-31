@@ -1,0 +1,6 @@
+@startuml
+
+!theme materia
+Foo -> Bar
+
+@enduml
