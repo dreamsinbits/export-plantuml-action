@@ -3,7 +3,7 @@ on: [push]
 jobs:
   export_plantuml:
     runs-on: ubuntu-latest
-    name: Exports PLantUML diagrams to image files
+    name: Exports PLantUML diagrams to image files and checks if that has worked.
     steps:
       # To use this repository's private action,
       # you must check out the repository
