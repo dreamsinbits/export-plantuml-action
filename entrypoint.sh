@@ -1,6 +1,11 @@
 #!/bin/bash
 
 PUML='java -jar /opt/plantuml.jar'
-ARGS="${1}"
+ARGS=""
 
-${PUML} ${1}
+for arg in $@; do
+  ARGS="${ARGS} ${arg}"
+done
+
+echo ${PUML} ${ARGS}
+${PUML} ${ARGS}
